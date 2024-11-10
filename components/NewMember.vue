@@ -1,9 +1,9 @@
 <template>
   <div
     :class="{
-      'mx-2 mt-6 flex w-80 flex-col justify-center rounded-md border border-transparent bg-white p-4': true,
-      'mt-60 md:mb-20': !collapsed, // Unterschiedliche Margin bei collapsed=false
-      'mb-0': collapsed, // Unterschiedliche Margin bei collapsed=true
+      'mx-2 mt-6 flex w-80 flex-col justify-start rounded-md border border-transparent bg-white p-4': true,
+      'mt-56 md:mb-20': !collapsed, // Unterschiedliche Margin bei collapsed=false
+      'mt-0': collapsed, // Unterschiedliche Margin bei collapsed=true
     }"
   >
     <Icon
