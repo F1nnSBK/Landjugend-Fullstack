@@ -19,7 +19,20 @@ const { showLandingPage } = storeToRefs(store);
 function revealWebsite() {
   showLandingPage.value = false;
   store.debugInfo();
+  useHead({
+    bodyAttrs: {
+      class: '!overflow-auto',
+    },
+  });
 }
+
+onMounted(() => {
+  useHead({
+    bodyAttrs: {
+      class: 'overflow-hidden w-full min-h-dvh',
+    },
+  });
+});
 </script>
 
 <style scoped>
