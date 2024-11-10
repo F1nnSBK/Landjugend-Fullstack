@@ -4,13 +4,13 @@
     <div class="mx-auto w-full max-w-screen-xl p-4 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
-          <a href="/" class="flex items-center">
+          <NuxtLink :to="{ path: '/', hash: '#Home' }">
             <img
               src="../assets/images/logo/logo-hor-w.png"
               class="mb-3 h-14"
               alt="laju Logo"
             />
-          </a>
+          </NuxtLink>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
           <div>
@@ -57,9 +57,8 @@
       <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2024
-          <a href="https://flowbite.com/" class="hover:underline"
-            >Landjugend Primisweiler</a
-          >. All Rights Reserved.
+          <NuxtLink :to="{ path: '/', hash: '#Home' }">Landjugend Primisweiler</NuxtLink>.
+          All Rights Reserved.
         </span>
       </div>
     </div>
