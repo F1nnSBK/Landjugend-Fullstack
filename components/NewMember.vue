@@ -2,7 +2,7 @@
   <div
     :class="{
       'mx-2 flex w-80 flex-col justify-start rounded-md border border-transparent bg-white p-4': true,
-      'mt-52 md:mb-20': !collapsed, // Unterschiedliche Margin bei collapsed=false
+      'mt-44 md:mb-20': !collapsed, // Unterschiedliche Margin bei collapsed=false
       'mt-0': collapsed, // Unterschiedliche Margin bei collapsed=true
     }"
   >

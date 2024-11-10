@@ -2,7 +2,7 @@
   <nav class="sticky top-0 z-10 border-b-2 border-gray-100 bg-white">
     <div class="mx-6 flex items-center justify-between p-4">
       <div class="fle basis-28 items-center">
-        <NuxtLink to="/">
+        <NuxtLink :to="{ path: '/', hash: '#Home' }" @click.prevent="revealWebsite">
           <img src="assets/images/logo/logo-hor.png" alt="laju-logo" />
         </NuxtLink>
       </div>
@@ -31,22 +31,25 @@
           <NuxtLink
             :to="{ path: '/', hash: '#Home' }"
             class="m-2 p-1 duration-200 hover:text-lj-accent"
+            @click.prevent="revealWebsite"
             >Home</NuxtLink
           >
           <NuxtLink
             :to="{ path: '/', hash: '#Das-sind-wir' }"
             class="m-2 p-1 duration-200 hover:text-lj-accent"
+            @click.prevent="revealWebsite"
             >Über Uns</NuxtLink
           >
           <NuxtLink
             :to="{ path: '/', hash: '#Kontakt' }"
             class="m-2 p-1 duration-200 hover:text-lj-accent"
+            @click.prevent="revealWebsite"
             >Kontakt</NuxtLink
           >
           <NuxtLink
             :to="{ path: '/admin' }"
             class="min-w-72 rounded-md bg-lj-accent p-1.5 px-3 text-center duration-300 hover:bg-slate-700 hover:text-white focus:bg-slate-700"
-            target="_blank"
+            @click.prevent="revealWebsite"
             >Für Mitglieder</NuxtLink
           >
         </div>
@@ -66,21 +69,25 @@
         <NuxtLink
           :to="{ path: '/', hash: '#Home' }"
           class="nav-link min-w-72 border-b-2 py-2 text-center"
+          @click.prevent="revealWebsite"
           >Home</NuxtLink
         >
         <NuxtLink
           :to="{ path: '/', hash: '#Das-sind-wir' }"
           class="nav-link mt-4 min-w-72 border-b-2 py-2 text-center"
+          @click.prevent="revealWebsite"
           >Über Uns</NuxtLink
         >
         <NuxtLink
           :to="{ path: '/', hash: '#Kontakt' }"
           class="nav-link mt-4 min-w-72 border-b-2 py-2 text-center"
+          @click.prevent="revealWebsite"
           >Kontakt</NuxtLink
         >
         <NuxtLink
           :to="{ path: '/admin' }"
           class="mt-6 min-w-72 rounded-lg border-2 border-lj-accent py-2 text-center duration-300 hover:bg-lj-accent focus:border-slate-600 focus:bg-slate-600"
+          @click.prevent="revealWebsite"
           >Für Mitglieder</NuxtLink
         >
       </div>
@@ -91,6 +98,20 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { useToggle } from '@/composables/toggle';
+import { useLandingStore } from '~/stores/landing';
+
+const store = useLandingStore();
+const { showLandingPage } = storeToRefs(store);
+
+function revealWebsite() {
+  showLandingPage.value = false;
+  store.debugInfo();
+  useHead({
+    bodyAttrs: {
+      class: '!overflow-auto',
+    },
+  });
+}
 
 const { state: hideDropdownMenu, toggle } = useToggle(true);
 

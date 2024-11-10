@@ -1,6 +1,6 @@
 <template>
   <LandingPage />
-  <div class="content-viewport-height flex flex-col justify-center">
+  <div class="content-viewport-height flex flex-col items-center justify-center">
     <div class="flex flex-col items-center justify-center">
       <div
         class="my-8 bg-gradient-to-br from-slate-600 to-slate-800 bg-clip-text font-sans text-5xl text-transparent drop-shadow-md"
@@ -14,8 +14,13 @@
       />
     </div>
   </div>
-  <section id="Das-sind-wir" class="flex scroll-mt-6 justify-center scroll-smooth">
-    <div class="my-20 bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-xl">
+  <section
+    id="Das-sind-wir"
+    class="flex snap-center scroll-mt-6 justify-center scroll-smooth"
+  >
+    <div
+      class="my-20 w-11/12 rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-xl"
+    >
       <div class="">
         <div class="border-b-4 border-b-zinc-700 px-8 py-4 text-2xl text-white">
           Über uns
@@ -33,7 +38,10 @@
       </div>
     </div>
   </section>
-  <section id="Kontakt" class="flex scroll-mt-28 justify-center scroll-smooth">
+  <section
+    id="Kontakt"
+    class="flex snap-center scroll-mt-28 justify-center scroll-smooth"
+  >
     <div
       class="mb-32 w-11/12 rounded-3xl bg-gradient-to-br from-zinc-50 to-zinc-200 shadow-xl"
     >
@@ -68,7 +76,7 @@ definePageMeta({
 
 <style scoped>
 .content-viewport-height {
-  height: 92dvh;
+  height: 83dvh;
 }
 
 .background-mobile {
