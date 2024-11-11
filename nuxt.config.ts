@@ -1,5 +1,6 @@
 import material from '@primevue/themes/material';
 
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
@@ -9,8 +10,12 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/tailwindcss',
     '@primevue/nuxt-module',
-    'nuxt-icon-tw'
+    'nuxt-icon-tw',
   ],
+
+  tailwindcss: {
+    configPath: './tailwind.config.js',  // Pfad zu Ihrer Tailwind-Konfigurationsdatei
+  },
 
   css: [
     '~/assets/css/toast.css'

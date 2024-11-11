@@ -1,19 +1,6 @@
 <template>
   <LandingPage />
-  <div class="content-viewport-height flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center justify-center">
-      <div
-        class="my-8 bg-gradient-to-br from-slate-600 to-slate-800 bg-clip-text font-sans text-5xl text-transparent drop-shadow-md"
-      ></div>
-    </div>
-    <div>
-      <img
-        src="assets/images/beitrag.png"
-        alt="beitrag"
-        class="mb-40 shadow-lg sm:max-w-screen-sm"
-      />
-    </div>
-  </div>
+  <Swiper />
   <section
     id="Das-sind-wir"
     class="flex snap-center scroll-mt-6 justify-center scroll-smooth"

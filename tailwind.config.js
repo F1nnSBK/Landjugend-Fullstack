@@ -1,5 +1,5 @@
-// tailwind.config.js
-export default {
+// tailwind.config.cjs
+module.exports = {
   content: [
     './pages/**/*.{vue,js,ts,jsx,tsx}',
     './components/**/*.{vue,js,ts,jsx,tsx}',
@@ -11,5 +11,4 @@ export default {
       },
     },
   },
-  plugins: []
 }
