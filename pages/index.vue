@@ -11,7 +11,7 @@
         >
       </div>
       <div
-        class="mx-5 my-10 flex flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out hover:scale-105"
+        class="mx-5 my-6 flex flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out hover:scale-105"
       >
         <img
           src="/assets/images/beitrag.png"
@@ -106,5 +106,7 @@ definePageMeta({
 
 .grey-waves {
   background-image: url('../assets/images/grey-waves.svg');
+  background-position-x: -2.5rem;
+  background-position-y: -2rem;
 }
 </style>
