@@ -3,7 +3,7 @@
   <div class="snap-proximity">
     <div class="flex w-full flex-col bg-white">
       <div
-        class="backgorund-pattern m-5 h-1/3 snap-start rounded-xl px-5 py-20 hover:opacity-10"
+        class="backgorund-pattern m-5 h-1/3 snap-start rounded-xl px-5 py-10 hover:opacity-10"
       >
         <span
           class="berg-schnee flex justify-center bg-cover bg-clip-text bg-center bg-no-repeat text-7xl font-bold leading-tight text-transparent"
