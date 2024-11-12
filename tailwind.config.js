@@ -1,9 +1,6 @@
 // tailwind.config.cjs
-module.exports = {
-  content: [
-    './pages/**/*.{vue,js,ts,jsx,tsx}',
-    './components/**/*.{vue,js,ts,jsx,tsx}',
-  ],
+export default {
+  content: ['./pages/**/*.{vue,js,ts,jsx,tsx}', './components/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -11,4 +8,4 @@ module.exports = {
       },
     },
   },
-}
+};
