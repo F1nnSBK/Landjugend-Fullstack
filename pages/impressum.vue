@@ -18,7 +18,7 @@
         Nils Schlegel<br />
         <br />
         Website-Beauftragter<br />
-        <NuxtLink to="/admin/neue-mitglieder" style="color: var(--black); cursor: default"
+        <NuxtLink to="/admin" style="color: var(--black); cursor: default"
           >Finn Hertsch</NuxtLink
         >
       </p>
