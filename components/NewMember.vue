@@ -78,10 +78,6 @@ const form = ref<HTMLElement | null>(null);
 
 const { state: collapsed, toggle } = useToggle(true);
 
-if (!collapsed) {
-  form.value.style.opacity = '0';
-}
-
 const emit = defineEmits(['navigateToWebsite']);
 
 function navigateToWebsite() {
