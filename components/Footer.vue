@@ -44,10 +44,10 @@
             </h2>
             <ul class="font-medium text-gray-500 dark:text-gray-400">
               <li class="mb-4">
-                <a href="#" class="hover:underline">Datenschutz</a>
+                <NuxtLink to="/datenschutz" class="hover:underline">Datenschutz</NuxtLink>
               </li>
               <li>
-                <a href="#" class="hover:underline">Impressum</a>
+                <NuxtLink to="/impressum" class="hover:underline">Impressum</NuxtLink>
               </li>
             </ul>
           </div>
