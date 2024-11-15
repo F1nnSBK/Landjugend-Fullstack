@@ -15,7 +15,7 @@
           class="mx-5 my-6 flex flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out hover:scale-105 sm:max-w-2xl"
         >
           <img
-            src="/assets/images/beitrag.png"
+            src="/assets/images/beitrag.jpeg"
             alt="beitrag"
             class="img-fluid sm:max-w-screen-sm"
           />
