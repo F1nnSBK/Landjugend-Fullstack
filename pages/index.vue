@@ -1,6 +1,6 @@
 <template>
   <LandingPage />
-  <div class="snap-proximity">
+  <div class="snap-proximity" v-if="!showLandingPage">
     <div class="flex w-full flex-col bg-white">
       <div
         class="backgorund-pattern m-5 h-1/3 snap-start grid-rows-1 rounded-xl px-5 py-10 hover:opacity-10 sm:hidden"
@@ -78,10 +78,33 @@
         </div>
       </section>
     </div>
+    <div class="flex flex-col items-center justify-center bg-zinc-900 pb-24">
+      <button
+        class="custom-gradient p-auto mt-1 w-72 cursor-pointer rounded border-transparent px-3 py-2 text-white shadow-lg transition-transform duration-300 hover:scale-105"
+        @click="revealLandingPage"
+      >
+        Mitglied werden
+      </button>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useLandingStore } from '~/stores/landing';
+
+const store = useLandingStore();
+const { showLandingPage } = storeToRefs(store);
+
+function revealLandingPage() {
+  showLandingPage.value = true;
+  store.debugInfo();
+  useHead({
+    bodyAttrs: {
+      class: 'overflow-auto',
+    },
+  });
+}
+
 definePageMeta({
   layouts: 'default',
 });
@@ -129,5 +152,13 @@ definePageMeta({
     background-size: cover;
     background-position: top;
   }
+}
+
+.custom-gradient {
+  background-image: linear-gradient(to right, #feea0e 2%, #ec4899 120%);
+}
+
+.custom-gradient:focus {
+  background-image: none;
 }
 </style>
