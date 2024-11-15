@@ -2,7 +2,7 @@
   <div
     :class="{
       'mx-2 flex w-80 flex-col justify-start rounded-md border border-transparent bg-white p-4': true,
-      'mt-44 md:mb-20': !collapsed, // Unterschiedliche Margin bei collapsed=false
+      'mt-44 opacity-100 transition duration-700 md:mb-20': !collapsed, // Unterschiedliche Margin bei collapsed=false
       'mt-0': collapsed, // Unterschiedliche Margin bei collapsed=true
     }"
   >
@@ -74,8 +74,13 @@ import { useToggle } from '@/composables/toggle';
 
 const toast = useToast();
 const typeText = ref<HTMLElement | null>(null);
+const form = ref<HTMLElement | null>(null);
 
 const { state: collapsed, toggle } = useToggle(true);
+
+if (!collapsed) {
+  form.value.style.opacity = '0';
+}
 
 const emit = defineEmits(['navigateToWebsite']);
 

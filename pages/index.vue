@@ -3,27 +3,34 @@
   <div class="snap-proximity">
     <div class="flex w-full flex-col bg-white">
       <div
-        class="backgorund-pattern m-5 h-1/3 snap-start rounded-xl px-5 py-10 hover:opacity-10"
+        class="backgorund-pattern m-5 h-1/3 snap-start grid-rows-1 rounded-xl px-5 py-10 hover:opacity-10 sm:hidden"
       >
         <span
           class="berg-schnee flex justify-center bg-cover bg-clip-text bg-center bg-no-repeat text-7xl font-bold leading-tight text-transparent"
           >UNSERE NEWS</span
         >
       </div>
-      <div
-        class="mx-5 my-6 flex flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out hover:scale-105"
-      >
-        <img
-          src="/assets/images/beitrag.png"
-          alt="beitrag"
-          class="img-fluid sm:max-w-screen-sm"
-        />
+      <div class="flex w-full justify-center lg:mt-20">
+        <div
+          class="mx-5 my-6 flex flex-col items-center justify-center overflow-hidden rounded-2xl shadow-xl transition-all duration-700 ease-in-out hover:scale-105 sm:max-w-2xl"
+        >
+          <img
+            src="/assets/images/beitrag.png"
+            alt="beitrag"
+            class="img-fluid sm:max-w-screen-sm"
+          />
+        </div>
       </div>
     </div>
-    <div class="grey-waves bg-zinc-900 bg-top bg-no-repeat pt-56">
-      <section id="Das-sind-wir" class="flex scroll-mt-6 justify-center scroll-smooth">
+    <div
+      class="grey-waves bg-zinc-900 bg-top bg-no-repeat pt-56 sm:bg-cover md:flex md:justify-evenly md:justify-items-center md:p-20 md:pt-96"
+    >
+      <section
+        id="Das-sind-wir"
+        class="flex scroll-mt-28 justify-center scroll-smooth md:w-1/2"
+      >
         <div
-          class="my-20 w-11/12 rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-xl transition-all duration-700 ease-in-out hover:scale-105"
+          class="mb-20 w-11/12 rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-xl transition-all duration-700 ease-in-out hover:scale-105 md:mb-32"
         >
           <div class="snap-center">
             <div class="border-b-4 border-b-zinc-700 px-8 py-4 text-2xl text-white">
@@ -44,7 +51,7 @@
       </section>
       <section
         id="Kontakt"
-        class="flex snap-center scroll-mt-28 justify-center scroll-smooth"
+        class="flex snap-center scroll-mt-28 justify-center scroll-smooth md:w-1/2"
       >
         <div
           class="mb-32 w-11/12 rounded-3xl bg-gradient-to-br from-zinc-800 to-zinc-900 shadow-xl transition-all duration-700 ease-in-out hover:scale-105"
@@ -96,6 +103,12 @@ definePageMeta({
   background-image: url('../assets/images/berg-schnee.jpg');
 }
 
+@media screen and (min-width: 792px) {
+  .berg-schnee {
+    background-position-y: -0rem;
+  }
+}
+
 .backgorund-pattern {
   background-color: #18181b;
   opacity: 1;
@@ -108,5 +121,13 @@ definePageMeta({
   background-image: url('../assets/images/grey-waves.svg');
   background-position-x: -2.5rem;
   background-position-y: -2rem;
+}
+
+@media screen and (min-width: 640px) {
+  .grey-waves {
+    background-image: url('../assets/images/grey-waves-dekstop.svg');
+    background-size: cover;
+    background-position: top;
+  }
 }
 </style>
