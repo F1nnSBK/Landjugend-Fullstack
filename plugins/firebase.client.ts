@@ -8,7 +8,6 @@ import { getAuth, type Auth, setPersistence, browserSessionPersistence } from "f
 export default defineNuxtPlugin(async (nuxtApp) => {
     // Runtime config for env variables
     const config = useRuntimeConfig().public;
-    console.log("API KEY", process.env.FB_API_KEY)
 
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
