@@ -39,7 +39,7 @@
       </div>
       <div class="submit-field my-2 mt-6 flex w-full justify-center p-2">
         <button
-          class="custom-gradient p-auto mt-1 w-3/5 cursor-pointer rounded border-transparent px-3 py-2 text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-slate-50 focus:bg-slate-400 focus:outline-none"
+          class="custom-gradient p-auto mt-1 w-3/5 cursor-pointer rounded border-transparent px-3 py-2 text-black shadow-lg transition-transform duration-300 after:cursor-default hover:scale-105 hover:bg-slate-50 focus:bg-slate-800 focus:text-white focus:outline-none"
           type="submit"
         >
           Senden
@@ -48,7 +48,7 @@
     </form>
     <div v-if="collapsed" class="mt-4 flex flex-col items-center justify-center">
       <button
-        class="custom-gradient p-auto mt-1 w-4/5 cursor-pointer rounded border-transparent px-3 py-2 text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-slate-50 focus:bg-slate-400 focus:outline-none"
+        class="custom-gradient p-auto mt-1 w-4/5 cursor-pointer rounded border-transparent px-3 py-2 text-black shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-slate-50 focus:bg-slate-400 focus:outline-none"
         v-on:click.prevent="handleClick"
       >
         Mitglied werden
@@ -176,7 +176,7 @@ function type() {
 
 <style scoped>
 .custom-gradient {
-  background-image: linear-gradient(to right, #feea0e 2%, #ec4899 120%);
+  background-image: linear-gradient(to right, #fddd0e 1%, #fddd0e 120%);
 }
 
 .custom-gradient:focus {
