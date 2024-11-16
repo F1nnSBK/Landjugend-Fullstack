@@ -8,16 +8,18 @@ import { getAuth, type Auth, setPersistence, browserSessionPersistence } from "f
 export default defineNuxtPlugin(async (nuxtApp) => {
     // Runtime config for env variables
     const config = useRuntimeConfig().public;
+    console.log("API KEY", process.env.FB_API_KEY)
+
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
-        apiKey: config.NUXT_FB_API_KEY as string,
-        authDomain: config.NUXT_FB_AUTH_DOMAIN as string,
-        projectId: config.NUXT_FB_PROJECT_ID as string,
-        storageBucket: config.NUXT_FB_STORAGE_BUCKET as string,
-        messagingSenderId: config.NUXT_FB_MESSAGING_SENDER_ID as string,
-        appId: config.NUXT_FB_APP_ID as string,
-        measurementId: config.NUXT_FB_MEASUREMENT_ID as string,
+        apiKey: config.FB_API_KEY as string,
+        authDomain: config.FB_AUTH_DOMAIN as string,
+        projectId: config.FB_PROJECT_ID as string,
+        storageBucket: config.FB_STORAGE_BUCKET as string,
+        messagingSenderId: config.FB_MESSAGING_SENDER_ID as string,
+        appId: config.FB_APP_ID as string,
+        measurementId: config.FB_MEASUREMENT_ID as string,
     };
 
     // Initialize Firebase
