@@ -13,6 +13,16 @@ export default defineNuxtConfig({
     'nuxt-icon-tw',
   ],
 
+  nitro: {
+    firebase: {
+      gen: 2,
+      httpsOptions: {
+        region: 'europe-west1',
+        maxInstances: 3,
+      }
+    },
+  }, 
+
   tailwindcss: {
     configPath: './tailwind.config.js',  // Pfad zu Ihrer Tailwind-Konfigurationsdatei
   },
@@ -37,16 +47,5 @@ export default defineNuxtConfig({
     FB_MESSAGING_SENDER_ID: process.env.FB_MESSAGING_SENDER_ID,
     FB_APP_ID: process.env.FB_APP_ID,
     FB_MEASUREMENT_ID: process.env.FB_MEASUREMENT_ID,
-
-    // Client-accessable env variables (for dev)
-    public: {
-      NUXT_FB_API_KEY: process.env.NUXT_FB_API_KEY,
-      NUXT_FB_AUTH_DOMAIN: process.env.NUXT_FB_AUTH_DOMAIN,
-      NUXT_FB_PROJECT_ID: process.env.NUXT_FB_PROJECT_ID,
-      NUXT_FB_STORAGE_BUCKET: process.env.NUXT_FB_STORAGE_BUCKET,
-      NUXT_FB_MESSAGING_SENDER_ID: process.env.NUXT_FB_MESSAGING_SENDER_ID,
-      NUXT_FB_APP_ID: process.env.NUXT_FB_APP_ID,
-      NUXT_FB_MEASUREMENT_ID: process.env.NUXT_FB_MEASUREMENT_ID,
-    },
   }
 })

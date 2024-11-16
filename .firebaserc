@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "landjugend-beb43"
-  }
+    "default": "landjugend-beb43",
+    "prod": "landjugend-beb43"
+  },
+  "targets": {},
+  "etags": {}
 }
