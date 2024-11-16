@@ -1,6 +1,6 @@
 <template>
-  <div class="flex w-full items-center justify-center">
-    <div class="my-16 w-5/6 md:w-4/6">
+  <div class="flex w-full flex-wrap items-center justify-center overflow-x-hidden">
+    <div class="my-12 w-5/6 max-w-full md:w-4/6">
       <h1>Datenschutz&shy;erkl&auml;rung</h1>
       <h2>1. Datenschutz auf einen Blick</h2>
       <h3>Allgemeine Hinweise</h3>
@@ -520,24 +520,6 @@
           >https://www.dataprivacyframework.gov/participant/4452</a
         >.
       </p>
-      <h2>6. Plugins und Tools</h2>
-      <h3>Font Awesome (lokales Hosting)</h3>
-      <p>
-        Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font Awesome.
-        Font Awesome ist lokal installiert. Eine Verbindung zu Servern von Fonticons, Inc.
-        findet dabei nicht statt.
-      </p>
-      <p>
-        Weitere Informationen zu Font Awesome finden Sie in der Datenschutzerkl&auml;rung
-        f&uuml;r Font Awesome unter:
-        <a
-          href="https://fontawesome.com/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-          >https://fontawesome.com/privacy</a
-        >.
-      </p>
-      <p>Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
     </div>
   </div>
 </template>
@@ -551,4 +533,35 @@ useHead({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-size: larger;
+  font-weight: 600;
+  line-height: 3rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: larger;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: large;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+h4 {
+  margin-top: 1rem;
+  font-size: initial;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+a {
+  @apply text-blue-600 underline visited:text-purple-600 hover:text-blue-800;
+}
+</style>

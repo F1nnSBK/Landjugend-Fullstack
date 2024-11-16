@@ -1,18 +1,17 @@
 <template>
   <div class="flex min-h-screen w-full justify-center">
-    <div class="my-16 w-5/6 md:w-4/6">
-      <h1>Impressum</h1>
-
-      <p>
+    <div class="my-12 w-5/6 md:w-4/6">
+      <div class="my-4">
+        <strong>Impressum</strong> <br />
         Landjugend Primisweiler<br />
         88239 Wangen i.A. <br />
         Email:
         <a href="mailto:info@landjugend-primisweiler.de" style="color: var(--dark)"
           >info@landjugend-primisweiler.de</a
         >
-      </p>
+      </div>
 
-      <p>
+      <div class="my-4">
         <strong>Vertreten durch:</strong><br />
         Vorstand<br />
         Nils Schlegel<br />
@@ -21,7 +20,7 @@
         <NuxtLink to="/admin" style="color: var(--black); cursor: default"
           >Finn Hertsch</NuxtLink
         >
-      </p>
+      </div>
     </div>
   </div>
 </template>
