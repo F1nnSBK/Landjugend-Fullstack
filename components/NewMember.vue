@@ -39,7 +39,7 @@
       </div>
       <div class="submit-field my-2 mt-6 flex w-full justify-center p-2">
         <button
-          class="custom-gradient p-auto mt-1 w-3/5 cursor-pointer rounded border-transparent px-3 py-2 text-black shadow-lg transition-transform duration-300 after:cursor-default hover:scale-105 hover:bg-slate-50 focus:bg-slate-800 focus:text-white focus:outline-none"
+          class="custom-gradient p-auto mt-1 w-3/5 cursor-pointer rounded border-transparent px-3 py-2 text-black shadow-lg transition-transform duration-300 after:cursor-default hover:scale-105 hover:bg-slate-800 focus:bg-slate-800 focus:text-white focus:outline-none"
           type="submit"
         >
           Senden
