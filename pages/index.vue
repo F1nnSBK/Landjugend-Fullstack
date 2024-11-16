@@ -80,7 +80,7 @@
     </div>
     <div class="flex flex-col items-center justify-center bg-zinc-900 pb-24">
       <button
-        class="custom-gradient p-auto mt-1 w-72 cursor-pointer rounded border-transparent px-3 py-2 text-white shadow-lg transition-transform duration-300 hover:scale-105"
+        class="custom-gradient p-auto mt-1 w-72 cursor-pointer rounded border-transparent px-3 py-2 text-black shadow-lg transition-transform duration-300 hover:scale-105"
         @click="revealLandingPage"
       >
         Mitglied werden
@@ -155,7 +155,7 @@ definePageMeta({
 }
 
 .custom-gradient {
-  background-image: linear-gradient(to right, #feea0e 2%, #ec4899 120%);
+  background-image: linear-gradient(to right, #fddd0e 1%, #fddd0e 120%);
 }
 
 .custom-gradient:focus {
