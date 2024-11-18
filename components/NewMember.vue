@@ -84,8 +84,12 @@ function navigateToWebsite() {
   emit('navigateToWebsite');
 }
 
-// Handle User Data
-const data = ref({
+interface FormData {
+  name: string;
+  phone: string;
+}
+
+const data = ref<FormData>({
   name: '',
   phone: '',
 });
