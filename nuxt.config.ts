@@ -1,4 +1,3 @@
-import material from '@primevue/themes/material';
 
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -24,7 +23,7 @@ export default defineNuxtConfig({
   }, 
 
   tailwindcss: {
-    configPath: './tailwind.config.js',  // Pfad zu Ihrer Tailwind-Konfigurationsdatei
+    configPath: './tailwind.config.js',
   },
 
   css: [
@@ -37,9 +36,7 @@ export default defineNuxtConfig({
     }
   },
 
-  // GET ENV VARIABLES
   runtimeConfig: {
-    // Server-only variables (won't be exposed to client)
     public: {
       FB_API_KEY: process.env.FB_API_KEY || "AIzaSyCxUix8mlEQzGkVTbJfonGikrW6yFa8otk",
       FB_AUTH_DOMAIN: process.env.FB_AUTH_DOMAIN,
