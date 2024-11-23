@@ -1,11 +1,16 @@
 rules_version = '2';
 
 service cloud.firestore {
-  match /databases/(default)/documents {
+  match /databases/{database}/documents {
     match /Landjugend/{documentId} {
-      allow create: if true;  // Jeder kann ein neues Dokument erstellen
-      allow read: if true;   // Jeder kann die Daten lesen
-      allow update, delete: if false; // Niemand kann Daten bearbeiten oder löschen
+      // Jeder kann ein neues Dokument erstellen
+      allow create: if true;
+
+      // Lesen und Löschen nur für Admins erlaubt
+      allow read, delete: if request.auth != null;
+
+      // Bearbeiten ist für alle verboten
+      allow update: if false;
     }
   }
 }
