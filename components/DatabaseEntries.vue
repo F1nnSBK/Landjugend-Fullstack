@@ -2,6 +2,7 @@
   <div
     class="m-auto mb-40 flex max-h-svh w-full flex-col rounded-t-lg bg-slate-200 shadow-lg sm:w-8/12 lg:w-6/12"
   >
+    <div class="p-4 text-center" v-if="data.length == 0">Keine Anfragen</div>
     <div class="border-b-2 border-zinc-700 p-4" v-for="item in data" :key="item.id">
       <div>
         {{ item.timestamp }}
