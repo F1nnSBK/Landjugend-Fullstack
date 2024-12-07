@@ -67,6 +67,7 @@ async function handleLogin() {
       detail: 'Login erfolgreich!',
       life: 30000,
     });
+    router.push('/admin');
   } else {
     toast.add({
       severity: 'error',
