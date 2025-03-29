@@ -85,7 +85,7 @@
           >Kontakt</NuxtLink
         >
         <NuxtLink
-          :to="{ path: '/admin' }"
+          :to="{ path: '/admin/login' }"
           class="mt-6 min-w-72 rounded-lg border-2 border-lj-accent py-2 text-center duration-300 hover:bg-lj-accent focus:border-slate-600 focus:bg-slate-600"
           @click.prevent="revealWebsite"
           >Für Mitglieder</NuxtLink
